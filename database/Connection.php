@@ -14,7 +14,7 @@ class Connection{
         //un phpmyadmin    pass phpmyadmin     ip 				dbname
 	//public function __construct($username="admin", $password ="admin", $host="10.150.14.73", $dbname="prodvm01", $options = []){
         //public function __construct($username="root", $password ="3l3m3nt0linux", $host="localhost", $dbname="prodvm01", $options = []){
-         public function __construct($username="root", $password ="", $host="localhost", $dbname="prodvm01", $options = []){   
+         public function __construct($username="root", $password ="sebas2008", $host="localhost", $dbname="prodvm01", $options = []){   
 //public function __construct($username="root", $password ="123456", $host="localhost", $dbname="prodvm01", $options = []){
 	//  public function __construct($username="root", $password ="", $host="localhost", $dbname="prodvm01", $options = []){	
 		$this->isConn = TRUE;
