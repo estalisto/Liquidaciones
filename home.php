@@ -1,4 +1,13 @@
 <?php include("barras/cabecera.php"); ?>    
+<!--/******************************************************************************************
+ Nombre: home.php
+ Copyright de la Empresa: Veolia Ecuador
+ Fecha de puesta en produccion:
+ Fecha fin de la programacion: 16-11-2018 
+ Autor: Roberto Castro Baus
+ Referencia: PORTAL DE LIQUIDACIONES PARA SUBCONTRATISTAS MANTA
+ Descripción General: pagina que presenta informacion grafica de las actas
+ ******************************************************************************************/-->  
 <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
 <script type="text/javascript" src="assets/js/loader.js">-->
 

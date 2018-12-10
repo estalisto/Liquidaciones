@@ -1,5 +1,13 @@
 
-/* global riot */
+/******************************************************************************************
+Nombre: admin.js
+Copyright de la Empresa: Veolia Ecuador
+Fecha de puesta en produccion:
+Fecha fin de la programacion: 06-12-2018
+Autor: Stalyn Granda
+Referencia: PORTAL DE LIQUIDACIONES PARA SUBCONTRATISTAS MANTA
+Descripción General: script de consulta a las paginas qeu invocan a los ws
+ ******************************************************************************************/
 
 function creaMultaRiot() {
     var idActa = $('#txtActaMulta').val();
@@ -28,7 +36,8 @@ function obtieneOrdenesTrabajo() {
         },
         success: function (data)
         {   
-           
+			console.log("fecha inicio:" + data.FECHA_INICIO + " fecha fin :" + data.FECHA_FIN + " Contrato:" + data.CONTRATO);
+
            var anioAct = data.FECHA_INICIO.substring(0, 4); // 01 fechaInicio.getFullYear();
            var mesAct = data.FECHA_INICIO.substring(5,7);  //2018-05-16
            var diaAct = data.FECHA_INICIO.substring(8,10); // 20180510
@@ -58,13 +67,35 @@ function obtieneOrdenesTrabajo() {
                 },
                 success: function (data)
                 {  
-                    $('#modal-msg').find('#msg-body').text(data.msg);
+					console.log("Mensaje" + data.msg);
+
+					$('#modal-msg').find('#msg-body').text(data.msg);
                     $('#modal-msg').modal('show');
-                    jsRemoveWindowLoad();
+					jsRemoveWindowLoad();
+				
                    
                     //bootbox.alert(data);
                    // $('#table-planilla1').html(data);                    
-                } 
+				},
+				error: function (jqXHR, exception) {
+					console.log('Favor Comuncarse con Soporte');
+		
+					if (jqXHR.status === 0) {
+						console.log('Not connect.\n Verify Network.');
+					} else if (jqXHR.status == 404) {
+						console.log('Requested page not found. [404]');
+					} else if (jqXHR.status == 500) {
+						console.log('Internal Server Error [500].');
+					} else if (exception === 'parsererror') {
+						console.log('Requested JSON parse failed.');
+					} else if (exception === 'timeout') {
+						console.log('Time out error.');
+					} else if (exception === 'abort') {
+						console.log('Ajax request aborted.');
+					} else {
+						console.log('Uncaught Error.\n' + jqXHR.responseText);
+					}
+				}, 
             });
         }
     });

@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,10 +22,13 @@ define("IMAGENES","OS_IA_GETOTIMAGEN"); */
 
 /*Tipo de retorno WebServices*/
 define("MENSAJEERROR","OSBERRORMESSAGE");
-define("CODIGOERROR","ONUERRORCODE");                       
+define("CODIGOERROR","ONUERRORCODE");
 define("CURSOROR","OCUDATACURSOR");
 
-
+define ("USERDB","root");
+define ("PASSDB","");
+define ("HOSTDB","localhost");
+define ("INSTANCIADB","prodvm01");
 
 /*Ruta de WebServices*/
 /*define("RUTAW","http://10.150.43.63/OpenSmartflexWebAAVM/UI/");*/

@@ -44,6 +44,8 @@ function obtieneDetalleOT(idOrden) {
     });
 }
 
+
+
 function ocultaDiv(bandera){
     
     if (bandera){

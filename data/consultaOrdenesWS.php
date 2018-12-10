@@ -1,5 +1,14 @@
 <br />
 <?php
+/******************************************************************************************
+ Nombre: consultaOrdenesWS.php
+ Copyright de la Empresa: Veolia Ecuador
+ Fecha de puesta en produccion:
+ Fecha fin de la programacion: 16-11-2018 
+ Autor: Roberto Castro Baus
+ Referencia: PORTAL DE LIQUIDACIONES PARA SUBCONTRATISTAS MANTA
+ Descripción General: pagina que muestra la consulta del WS que trae informacion de las Ordenes de trabajo
+ ******************************************************************************************/ 
 require_once('../class/OrdenesWS.php');
 $ord = $ordenesWS->obtieneOrdenesWs();
 ?>
@@ -56,9 +65,22 @@ $ord = $ordenesWS->obtieneOrdenesWs();
                     <td><h6><?= $valor['FECHA_SOLUCION_TECNICA']; ?></h6></td>
                     <td><center><h6><?= $valor['FECHA_FINALIZACION']; ?></h6></center></td>
                     <td style="text-align: center " width="15%">
-                        <button data-toggle="tooltip" title="Ver Detalle" onclick="obtieneDetalleOT('<?= $valor['ID_ORDEN']; ?>')" type="button" class="btn btn-info btn-sm">
+						<!-- Enviar Datos al archivo export-->
+                        <a data-toggle="tooltip" title="Exportar"  href="data/exportExcelDetOT.php?ID_ORDEN=<?= $valor['ID_ORDEN']; ?>
+							&PLANILLA=<?= $valor['PLANILLA']; ?>
+							&ID_TRABAJO_SOLICITUD=<?= $valor['ID_TRABAJO_SOLICITUD']; ?>
+							&DIRECCION=<?= $valor['DIRECCION']; ?>
+							&TRABAJO_SOLICITADO=<?= $valor['TRABAJO_SOLICITADO']; ?>
+							&FECHA_SOLICITUD=<?= $valor['FECHA_SOLICITUD']; ?>
+							&SOLUCION_TECNICA=<?= $valor['SOLUCION_TECNICA']; ?>
+							&FECHA_SOLUCION_TECNICA=<?= $valor['FECHA_SOLUCION_TECNICA']; ?>
+						   &FECHA_FINALIZACION=<?= $valor['FECHA_FINALIZACION']; ?>"  type="button" class="btn btn-success btn-sm">
+                            <span  class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                        </a>
+						<button data-toggle="tooltip" title="Ver Detalle" onclick="obtieneDetalleOT('<?= $valor['ID_ORDEN']; ?>')" type="button" class="btn btn-info btn-sm">
                             <span  class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                         </button>
+						
                     </td>
 
                     </tr>

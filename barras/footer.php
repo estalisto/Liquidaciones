@@ -1,3 +1,12 @@
+<!--/******************************************************************************************
+ Nombre: cabecera.php
+ Copyright de la Empresa: Veolia Ecuador
+ Fecha de puesta en produccion:
+ Fecha fin de la programacion: 16-11-2018 
+ Autor: Roberto Castro Baus
+ Referencia: PORTAL DE LIQUIDACIONES PARA SUBCONTRATISTAS MANTA
+ Descripción General: pagina que forma el pie de la plantilla
+ ******************************************************************************************/ -->
  
  <!-- /.content-wrapper -->
   <footer class="main-footer">

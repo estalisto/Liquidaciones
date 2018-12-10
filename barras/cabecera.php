@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<!--/******************************************************************************************
+ Nombre: cabecera.php
+ Copyright de la Empresa: Veolia Ecuador
+ Fecha de puesta en produccion:
+ Fecha fin de la programacion: 16-11-2018 
+ Autor: Roberto Castro Baus
+ Referencia: PORTAL DE LIQUIDACIONES PARA SUBCONTRATISTAS MANTA
+ Descripción General: pagina que forma la cabecera de la plantilla
+ ******************************************************************************************/ -->
 <head>
  <!--  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
